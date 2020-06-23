@@ -1,7 +1,7 @@
 
 /* wifi_proxy change
 [Script]
-SSID助手 = debug=1,script-path=https://raw.githubusercontent.com/rainman0925/GFW/master/Surge/Scripts/wifi_proxy.js,type=event,event-name=network-changed,control-api=true
+SSID助手 = debug=1,script-path=https://raw.githubusercontent.com/redto-mato/GFW/master/Surge/Scripts/wifi_proxy.js,type=event,event-name=network-changed,control-api=true
 
 PS:记得自己修改WIFI名称
 主要功能:指定Wi-Fi(路由器翻)下,Surge使用直连模式,其他网络下Surge使用规则模式
@@ -11,7 +11,7 @@ Rewrite和Scripting依然有效
 */
 
 var wifiname = $network.wifi.ssid;
-var proxywifi = ["lao dua","lao dua_5G"];
+var proxywifi = ["tomato","tomato-5G"];
 for (var i = 0; i < proxywifi.length; i++) {
 	if (wifiname==proxywifi[i]){
 		$surge.setOutboundMode("direct");
